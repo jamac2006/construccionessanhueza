@@ -1,50 +1,12 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Panel - Construcciones Sanhueza</title>
-  
-  <!-- CAMBIO IMPORTANTE: Usamos jsdelivr en vez de unpkg -->
+  <title>Panel de Administración</title>
   <script src="https://cdn.jsdelivr.net/npm/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-  
-  <style>
-    body { font-family: sans-serif; padding: 20px; text-align: center; }
-    #status { max-width: 500px; margin: 50px auto; padding: 20px; border-radius: 8px; background: #f9f9f9; border: 1px solid #ddd; }
-    .ok { border-left: 5px solid green; }
-    .error { border-left: 5px solid red; color: red; }
-  </style>
 </head>
 <body>
-
-  <div id="status">
-    <h2>🔄 Probando conexión...</h2>
-    <p id="msg">Cargando sistema...</p>
-  </div>
-
-  <script>
-    // Esperamos 3 segundos para ver si el script cargó
-    setTimeout(function() {
-      if (window.CMS) {
-        // ÉXITO: Ocultamos el mensaje de estado y dejamos que el CMS se muestre
-        document.getElementById('status').style.display = 'none';
-        console.log("✅ Decap CMS cargado correctamente");
-      } else {
-        // ERROR: Mostramos mensaje claro
-        document.getElementById('status').className = 'error';
-        document.getElementById('status').innerHTML = `
-          <h2>❌ No se pudo cargar el script</h2>
-          <p>Posibles causas:</p>
-          <ol style="text-align: left;">
-            <li>Tienes un <strong>AdBlocker</strong> activado (pásualo en esta página).</li>
-            <li>Tu internet bloquea scripts externos.</li>
-            <li>Prueba en una <strong>ventana de Incógnito</strong>.</li>
-          </ol>
-          <p><small>Presiona F12 y revisa la pestaña "Network". ¿El archivo decap-cms.js dice "200" o "Error"?</small></p>
-        `;
-      }
-    }, 3000);
-  </script>
-
+  <!-- Decap CMS se monta automáticamente aquí -->
 </body>
 </html>
