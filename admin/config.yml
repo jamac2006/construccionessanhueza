@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: jamac2006/construccionessanhueza
-  branch: main  # ⚠️ Si tu rama principal se llama "master", cambia "main" por "master"
+  branch: main
 
 media_folder: "imagenes"
 public_folder: "imagenes"
@@ -17,12 +17,12 @@ collections:
         label: "📋 Datos de Contacto y Textos"
         name: "site_config"
         fields:
-          - {label: "📱 Teléfono WhatsApp", name: "whatsapp", widget: "string", default: "+56912345678"}
-          - {label: "✉️ Email", name: "email", widget: "string", default: "contacto@construccionessanhueza.cl"}
-          - {label: "📍 Ubicación", name: "location", widget: "string", default: "Puerto Montt, Chile"}
-          - {label: "🏠 Título Principal", name: "hero_title", widget: "string", default: "Construcciones Sanhueza"}
-          - {label: "Subtítulo", name: "hero_subtitle", widget: "text", default: "Calidad y confianza en cada proyecto"}
-          - {label: "Texto de Bienvenida", name: "welcome_text", widget: "text", default: "Somos una empresa dedicada a la construcción y remodelación con experiencia en la región."}
+          - { label: "📱 Teléfono WhatsApp", name: "whatsapp", widget: "string", default: "+56912345678" }
+          - { label: "✉️ Email", name: "email", widget: "string", default: "contacto@construccionessanhueza.cl" }
+          - { label: "📍 Ubicación", name: "location", widget: "string", default: "Puerto Montt, Chile" }
+          - { label: "🏠 Título Principal", name: "hero_title", widget: "string", default: "Construcciones Sanhueza" }
+          - { label: "Subtítulo", name: "hero_subtitle", widget: "text", default: "Calidad y confianza en cada proyecto" }
+          - { label: "Texto de Bienvenida", name: "welcome_text", widget: "text", default: "Somos una empresa dedicada a la construcción y remodelación con experiencia en la región." }
 
   - name: "servicios"
     label: "🔧 Servicios"
@@ -32,10 +32,10 @@ collections:
     extension: "yml"
     format: "yml"
     fields:
-      - {label: "Título del Servicio", name: "title", widget: "string"}
-      - {label: "Descripción", name: "description", widget: "text"}
-      - {label: "Imagen", name: "image", widget: "image", required: false}
-      - {label: "Orden (1 = primero)", name: "order", widget: "number", default: 1, min: 1, max: 100}
+      - { label: "Título del Servicio", name: "title", widget: "string" }
+      - { label: "Descripción", name: "description", widget: "text" }
+      - { label: "Imagen", name: "image", widget: "image", required: false }
+      - { label: "Orden (1 = primero)", name: "order", widget: "number", default: 1, min: 1, max: 100 }
 
   - name: "proyectos"
     label: "🏗️ Proyectos"
@@ -45,9 +45,9 @@ collections:
     extension: "yml"
     format: "yml"
     fields:
-      - {label: "Nombre del Proyecto", name: "title", widget: "string"}
-      - {label: "Descripción", name: "description", widget: "text"}
-      - {label: "Imagen Principal", name: "image", widget: "image", required: true}
-      - {label: "Categoría", name: "category", widget: "select", options: ["Residencial", "Comercial", "Remodelación", "Otros"]}
-      - {label: "Año", name: "year", widget: "number", default: 2024, min: 2000, max: 2030}
-      - {label: "¿Mostrar en portada?", name: "featured", widget: "boolean", default: false}
+      - { label: "Nombre del Proyecto", name: "title", widget: "string" }
+      - { label: "Descripción", name: "description", widget: "text" }
+      - { label: "Imagen Principal", name: "image", widget: "image", required: true }
+      - { label: "Categoría", name: "category", widget: "select", options: ["Residencial", "Comercial", "Remodelación", "Otros"] }
+      - { label: "Año", name: "year", widget: "number", default: 2024, min: 2000, max: 2030 }
+      - { label: "¿Mostrar en portada?", name: "featured", widget: "boolean", default: false }
