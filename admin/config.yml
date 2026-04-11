@@ -5,21 +5,18 @@ backend:
 
 media_folder: "imagenes"
 public_folder: "imagenes"
-publish_mode: editorial_workflow
 
 collections:
   - name: "configuracion"
     label: "Configuracion"
-    editor:
-      preview: false
     files:
       - file: "_data/site.yml"
         label: "Datos de Contacto"
-        name: "site_config"
+        name: "site"
         fields:
-          - { label: "Telefono WhatsApp", name: "whatsapp", widget: "string" }
+          - { label: "Telefono", name: "telefono", widget: "string" }
           - { label: "Email", name: "email", widget: "string" }
-          - { label: "Ubicacion", name: "location", widget: "string" }
+          - { label: "Direccion", name: "direccion", widget: "string" }
 
   - name: "servicios"
     label: "Servicios"
@@ -29,9 +26,9 @@ collections:
     extension: "yml"
     format: "yml"
     fields:
-      - { label: "Titulo", name: "title", widget: "string" }
-      - { label: "Descripcion", name: "description", widget: "text" }
-      - { label: "Imagen", name: "image", widget: "image", required: false }
+      - { label: "Titulo", name: "titulo", widget: "string" }
+      - { label: "Descripcion", name: "descripcion", widget: "text" }
+      - { label: "Imagen", name: "imagen", widget: "image", required: false }
 
   - name: "proyectos"
     label: "Proyectos"
@@ -41,6 +38,6 @@ collections:
     extension: "yml"
     format: "yml"
     fields:
-      - { label: "Nombre", name: "title", widget: "string" }
-      - { label: "Descripcion", name: "description", widget: "text" }
-      - { label: "Imagen", name: "image", widget: "image", required: true }
+      - { label: "Nombre", name: "nombre", widget: "string" }
+      - { label: "Descripcion", name: "descripcion", widget: "text" }
+      - { label: "Imagen", name: "imagen", widget: "image", required: true }
