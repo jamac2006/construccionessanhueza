@@ -1,20 +1,12 @@
-# ========================================
-# CONFIGURACIÓN DE DECAP CMS
-# Construcciones Sanhueza - Versión principiante
-# ========================================
-
-# --- Conexión con GitHub ---
 backend:
   name: github
   repo: jamac2006/construccionessanhueza
-  branch: main  # ← cambia a "master" si tu rama principal se llama así
+  branch: main  # ⚠️ Si tu rama principal se llama "master", cambia "main" por "master"
 
-# --- Configuración de imágenes ---
-media_folder: "imagenes"        # Dónde se GUARDAN las imágenes en GitHub
-public_folder: "imagenes"       # Cómo se REFERENCIAN en el HTML
-publish_mode: editorial_workflow  # Permite guardar como "borrador" antes de publicar
+media_folder: "imagenes"
+public_folder: "imagenes"
+publish_mode: editorial_workflow
 
-# --- Colección 1: Configuración general del sitio ---
 collections:
   - name: "configuracion"
     label: "⚙️ Configuración"
@@ -24,63 +16,27 @@ collections:
       - file: "_data/site.yml"
         label: "📋 Datos de Contacto y Textos"
         name: "site_config"
-        description: "Edita aquí el teléfono, email, dirección y textos principales de tu sitio"
         fields:
-          - label: "📱 Teléfono WhatsApp (con código de país)"
-            name: "whatsapp"
-            widget: "string"
-            default: "+56912345678"
-          - label: "✉️ Email de contacto"
-            name: "email"
-            widget: "string"
-            default: "contacto@construccionessanhueza.cl"
-          - label: "📍 Ubicación / Dirección"
-            name: "location"
-            widget: "string"
-            default: "Puerto Montt, Chile"
-          - label: "🏠 Texto Principal (Hero)"
-            name: "hero_title"
-            widget: "string"
-            default: "Construcciones Sanhueza"
-          - label: "Subtítulo Principal"
-            name: "hero_subtitle"
-            widget: "text"
-            default: "Calidad y confianza en cada proyecto"
-          - label: "Texto de Bienvenida"
-            name: "welcome_text"
-            widget: "text"
-            default: "Somos una empresa dedicada a la construcción y remodelación..."
+          - {label: "📱 Teléfono WhatsApp", name: "whatsapp", widget: "string", default: "+56912345678"}
+          - {label: "✉️ Email", name: "email", widget: "string", default: "contacto@construccionessanhueza.cl"}
+          - {label: "📍 Ubicación", name: "location", widget: "string", default: "Puerto Montt, Chile"}
+          - {label: "🏠 Título Principal", name: "hero_title", widget: "string", default: "Construcciones Sanhueza"}
+          - {label: "Subtítulo", name: "hero_subtitle", widget: "text", default: "Calidad y confianza en cada proyecto"}
+          - {label: "Texto de Bienvenida", name: "welcome_text", widget: "text", default: "Somos una empresa dedicada a la construcción y remodelación con experiencia en la región."}
 
-  # --- Colección 2: Servicios ---
   - name: "servicios"
     label: "🔧 Servicios"
     folder: "_data/servicios"
-    create: true  # Permite crear nuevos servicios
-    slug: "{{slug}}"  # Nombre del archivo automático
+    create: true
+    slug: "{{slug}}"
     extension: "yml"
     format: "yml"
     fields:
-      - label: "Título del Servicio"
-        name: "title"
-        widget: "string"
-        example: "Construcción de Casas"
-      - label: "Descripción Corta"
-        name: "description"
-        widget: "text"
-        example: "Construimos tu hogar desde los cimientos hasta el último detalle."
-      - label: "Imagen (opcional)"
-        name: "image"
-        widget: "image"
-        required: false
-        hint: "Sube una foto representativa del servicio"
-      - label: "Orden de aparición (1 = primero)"
-        name: "order"
-        widget: "number"
-        default: 1
-        min: 1
-        max: 100
+      - {label: "Título del Servicio", name: "title", widget: "string"}
+      - {label: "Descripción", name: "description", widget: "text"}
+      - {label: "Imagen", name: "image", widget: "image", required: false}
+      - {label: "Orden (1 = primero)", name: "order", widget: "number", default: 1, min: 1, max: 100}
 
-  # --- Colección 3: Proyectos / Galería ---
   - name: "proyectos"
     label: "🏗️ Proyectos"
     folder: "_data/proyectos"
@@ -89,30 +45,9 @@ collections:
     extension: "yml"
     format: "yml"
     fields:
-      - label: "Nombre del Proyecto"
-        name: "title"
-        widget: "string"
-        example: "Casa Familiar - Puerto Varas"
-      - label: "Descripción"
-        name: "description"
-        widget: "text"
-        example: "Construcción completa de vivienda unifamiliar de 120m²"
-      - label: "Imagen Principal"
-        name: "image"
-        widget: "image"
-        required: true
-      - label: "Categoría"
-        name: "category"
-        widget: "select"
-        options: ["Residencial", "Comercial", "Remodelación", "Otros"]
-        default: "Residencial"
-      - label: "Año de realización"
-        name: "year"
-        widget: "number"
-        default: 2024
-        min: 2000
-        max: 2030
-      - label: "¿Mostrar en portada?"
-        name: "featured"
-        widget: "boolean"
-        default: false
+      - {label: "Nombre del Proyecto", name: "title", widget: "string"}
+      - {label: "Descripción", name: "description", widget: "text"}
+      - {label: "Imagen Principal", name: "image", widget: "image", required: true}
+      - {label: "Categoría", name: "category", widget: "select", options: ["Residencial", "Comercial", "Remodelación", "Otros"]}
+      - {label: "Año", name: "year", widget: "number", default: 2024, min: 2000, max: 2030}
+      - {label: "¿Mostrar en portada?", name: "featured", widget: "boolean", default: false}
