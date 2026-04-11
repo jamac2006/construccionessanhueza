@@ -1,9 +1,3 @@
-# Este archivo se llena automáticamente cuando edites desde el panel
-# Pero puedes poner valores iniciales aquí:
-
 whatsapp: "+56912345678"
 email: "contacto@construccionessanhueza.cl"
-location: "Puerto Montt, Chile"
-hero_title: "Construcciones Sanhueza"
-hero_subtitle: "Calidad y confianza en cada proyecto"
-welcome_text: "Somos una empresa dedicada a la construcción y remodelación con más de 20 años de experiencia en la región de Los Lagos."
+location: "Puerto Montt"
