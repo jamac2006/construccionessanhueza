@@ -5,18 +5,24 @@ backend:
 
 media_folder: "imagenes"
 public_folder: "imagenes"
+publish_mode: editorial_workflow
 
 collections:
   - name: "configuracion"
     label: "Configuracion"
+    editor:
+      preview: false
     files:
       - file: "_data/site.yml"
         label: "Datos de Contacto"
-        name: "site"
+        name: "site_config"
         fields:
-          - { label: "Telefono", name: "telefono", widget: "string" }
-          - { label: "Email", name: "email", widget: "string" }
-          - { label: "Direccion", name: "direccion", widget: "string" }
+          - { label: "Telefono WhatsApp", name: "whatsapp", widget: "string", default: "+56912345678" }
+          - { label: "Email", name: "email", widget: "string", default: "contacto@construccionessanhueza.cl" }
+          - { label: "Ubicacion", name: "location", widget: "string", default: "Puerto Montt, Chile" }
+          - { label: "Titulo Principal", name: "hero_title", widget: "string", default: "Construcciones Sanhueza" }
+          - { label: "Subtitulo", name: "hero_subtitle", widget: "text", default: "Calidad y confianza" }
+          - { label: "Texto Bienvenida", name: "welcome_text", widget: "text", default: "Bienvenidos" }
 
   - name: "servicios"
     label: "Servicios"
@@ -26,9 +32,10 @@ collections:
     extension: "yml"
     format: "yml"
     fields:
-      - { label: "Titulo", name: "titulo", widget: "string" }
-      - { label: "Descripcion", name: "descripcion", widget: "text" }
-      - { label: "Imagen", name: "imagen", widget: "image", required: false }
+      - { label: "Titulo", name: "title", widget: "string" }
+      - { label: "Descripcion", name: "description", widget: "text" }
+      - { label: "Imagen", name: "image", widget: "image", required: false }
+      - { label: "Orden", name: "order", widget: "number", default: 1 }
 
   - name: "proyectos"
     label: "Proyectos"
@@ -38,6 +45,9 @@ collections:
     extension: "yml"
     format: "yml"
     fields:
-      - { label: "Nombre", name: "nombre", widget: "string" }
-      - { label: "Descripcion", name: "descripcion", widget: "text" }
-      - { label: "Imagen", name: "imagen", widget: "image", required: true }
+      - { label: "Nombre", name: "title", widget: "string" }
+      - { label: "Descripcion", name: "description", widget: "text" }
+      - { label: "Imagen", name: "image", widget: "image", required: true }
+      - { label: "Categoria", name: "category", widget: "select", options: ["Residencial", "Comercial", "Remodelacion"] }
+      - { label: "Año", name: "year", widget: "number", default: 2024 }
+      - { label: "Destacado", name: "featured", widget: "boolean", default: false }
