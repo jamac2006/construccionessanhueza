@@ -2,33 +2,12 @@
 <html lang="es">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Panel de Administración - Construcciones Sanhueza</title>
-  <!-- Carga oficial de Decap CMS -->
+  <!-- Script oficial de Decap CMS -->
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-  <style>
-    body { font-family: system-ui, -apple-system, sans-serif; margin: 0; background: #f5f7fa; }
-    #nc-root { min-height: 100vh; }
-    .loading { text-align: center; padding: 5rem 1rem; color: #4b5563; }
-    .loading h2 { margin: 0 0 0.5rem; font-size: 1.5rem; }
-    .loading p { margin: 0; color: #6b7280; }
-  </style>
 </head>
 <body>
-  <div id="nc-root"></div>
-  <div class="loading" id="loader">
-    <h2>🔐 Cargando panel...</h2>
-    <p>Esto toma unos segundos. Si tarda más de 15s, presiona F12 y revisa la pestaña "Console".</p>
-  </div>
-
-  <script>
-    // Ocultar loader cuando el CMS termine de cargar
-    window.addEventListener('DOMContentLoaded', () => {
-      setTimeout(() => {
-        const loader = document.getElementById('loader');
-        if (loader) loader.remove();
-      }, 2000);
-    });
-  </script>
+  <!-- El CMS se monta automáticamente aquí. No agregues nada más. -->
 </body>
 </html>
