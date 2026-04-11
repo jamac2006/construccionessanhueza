@@ -5,8 +5,9 @@
 
 # --- Conexión con GitHub ---
 backend:
-  name: git-gateway
-  branch: main  # Si tu rama principal se llama "master", cambia "main" por "master"
+  name: github
+  repo: jamac2006/construccionessanhueza
+  branch: main  # ← cambia a "master" si tu rama principal se llama así
 
 # --- Configuración de imágenes ---
 media_folder: "imagenes"        # Dónde se GUARDAN las imágenes en GitHub
